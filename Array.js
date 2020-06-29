@@ -8,6 +8,7 @@ class Array {
     }
 
     push(value) {
+     
         if (this.length >= this._capacity) {
             this._resize((this.length + 1) * Array.SIZE_RATIO);
         }
@@ -23,6 +24,7 @@ class Array {
             throw new Error('Out of memory');
         }
         memory.copy(this.ptr, oldPtr, this.length);
+       
        memory.free(oldPtr);
         this._capacity = size;
     }

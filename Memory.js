@@ -27,11 +27,13 @@ class Memory {
       for (let i = 0; i < size; i++) {
         this.set(toIdx + i, this.get(fromIdx + i));
       }
+      
     } else {
       // Iterate backwards
       for (let i = size - 1; i >= 0; i--) {
         this.set(toIdx + i, this.get(fromIdx + i));
       }
+     
     }
   }
 
@@ -40,7 +42,9 @@ class Memory {
   }
 
   set(ptr, value) {
+   
     this.memory[ptr] = value;
+
   }
 }
 
